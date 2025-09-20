@@ -1,103 +1,84 @@
-import Image from "next/image";
+import { Timeline } from "./components/Timeline";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="min-h-screen bg-background text-foreground">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+        {/* Header */}
+        <header className="mb-12 sm:mb-16">
+          <h1 className="text-4xl sm:text-5xl font-bold mb-4 tracking-tight">
+            AppCloud
+          </h1>
+          <p className="text-xl sm:text-2xl text-muted mb-6 max-w-2xl leading-relaxed">
+            Samsung pre-installed software collecting user data. Developed by
+            Israeli company ironSource.
+          </p>
+        </header>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        {/* What you should know */}
+        <section className="mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl font-semibold mb-6 sm:mb-8">
+            What you should know
+          </h2>
+          <div className="space-y-5 sm:space-y-6">
+            <div className="border-l-2 border-accent pl-4 sm:pl-6">
+              <p className="text-base sm:text-lg leading-relaxed">
+                Collects IP addresses, device fingerprints, hardware details
+                without consent.
+              </p>
+            </div>
+            <div className="border-l-2 border-accent pl-4 sm:pl-6">
+              <p className="text-base sm:text-lg leading-relaxed">
+                Cannot be uninstalled without root access. Voids warranty.
+              </p>
+            </div>
+            <div className="border-l-2 border-accent pl-4 sm:pl-6">
+              <p className="text-base sm:text-lg leading-relaxed">
+                Violates laws in Lebanon where Israeli companies are banned.
+              </p>
+            </div>
+            <div className="border-l-2 border-accent pl-4 sm:pl-6">
+              <p className="text-base sm:text-lg leading-relaxed">
+                Pre-installed on Samsung A & M series globally, including WANA
+                and Southeast Asia.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Resources */}
+        <section className="mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl font-semibold mb-6 sm:mb-8">
+            Resources
+          </h2>
+          <div className="space-y-4 sm:space-y-5">
+            <div className="border-l-2 border-accent pl-4 sm:pl-6">
+              <a
+                href="/terms"
+                className="text-accent hover:text-accent-muted text-base sm:text-lg font-medium"
+              >
+                Terms & Conditions →
+              </a>
+            </div>
+            <div className="border-l-2 border-accent pl-4 sm:pl-6">
+              <a
+                href="/privacy"
+                className="text-accent hover:text-accent-muted text-base sm:text-lg font-medium"
+              >
+                Privacy Policy →
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Timeline */}
+        <section>
+          <h2 className="text-2xl sm:text-3xl font-semibold mb-6 sm:mb-8">
+            Timeline
+          </h2>
+          <Timeline />
+        </section>
+      </div>
     </div>
   );
 }

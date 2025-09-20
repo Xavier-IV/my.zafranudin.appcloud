@@ -1,0 +1,18 @@
+[
+  {
+    "date": "2025-09-15",
+    "title": "Netanyahu's cellphone statement",
+    "description": "Netanyahu stated 'You're holding a piece of Israel right there' when referring to cellphones, highlighting Israeli tech presence in mobile devices.",
+    "tags": ["context", "political"],
+    "status": "completed",
+    "link": "/research/netanyahu-statement"
+  },
+  {
+    "date": "2025-09-19",
+    "title": "Technical details revealed",
+    "description": "User @0bungler reveals AppCloud is on every Samsung phone post-2022, provides backdoor access, installs apps without permission, and cannot be deactivated or uninstalled.",
+    "tags": ["technical", "backdoor"],
+    "status": "completed",
+    "link": "/research/john-backdoor-discovery"
+  }
+]

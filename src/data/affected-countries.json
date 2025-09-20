@@ -16,7 +16,7 @@
     "discoveredBy": "Personal verification",
     "date": "2025-09-20",
     "details": "Confirmed on Samsung device in Southeast Asia, expanding known geographic scope beyond WANA regions",
-    "reportCount": 2,
-    "affectedModels": ["Galaxy A52", "Galaxy A13 (4G)"]
+    "reportCount": 4,
+    "affectedModels": ["Galaxy A52", "Galaxy A13 (4G)", "Galaxy A73", "Galaxy M52 5G"]
   }
 ]

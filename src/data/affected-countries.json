@@ -1,5 +1,15 @@
 [
   {
+    "countryCode": "DEU",
+    "countryName": "Germany",
+    "status": "confirmed",
+    "discoveredBy": "Samsung Community Forum",
+    "date": "2023-10-01",
+    "details": "User reported AppCloud on unbranded, unlocked S23 purchased in Germany. Described as 'multi-purpose backdoor' that reappears after every system update.",
+    "reportCount": 3,
+    "affectedModels": ["Galaxy S23", "Galaxy S24 Ultra", "Galaxy A-series"]
+  },
+  {
     "countryCode": "MYS",
     "countryName": "Malaysia",
     "status": "confirmed",

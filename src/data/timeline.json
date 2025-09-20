@@ -16,6 +16,14 @@
     "link": "/research/john-backdoor-discovery"
   },
   {
+    "date": "2023-04-08",
+    "title": "Samsung Community forum complaints emerge",
+    "description": "Samsung users report AppCloud as unwanted adware that cannot be uninstalled. German user reveals AppCloud is a 'multi-purpose backdoor' that reappears after every system update, developed by ironSource in Tel Aviv.",
+    "tags": ["community", "complaints", "backdoor"],
+    "status": "completed",
+    "link": "/research/samsung-community-complaints"
+  },
+  {
     "date": "2025-09-20",
     "title": "Personal verification and investigation",
     "description": "Discovered the AppCloud posts, verified the app exists on wife's Samsung phone. Made Twitter post to raise awareness and began investigating Terms & Conditions, finding suspicious clauses.",

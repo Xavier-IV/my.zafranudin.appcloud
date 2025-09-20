@@ -46,6 +46,53 @@ export default function Home() {
           </div>
         </section>
 
+        {/* What you can do */}
+        <section className="mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl font-semibold mb-6 sm:mb-8">
+            What you can do
+          </h2>
+          <div className="space-y-5 sm:space-y-6">
+            <div className="border-l-2 border-accent pl-4 sm:pl-6">
+              <h3 className="text-lg font-medium mb-2">
+                Check if you have AppCloud
+              </h3>
+              <p className="text-base sm:text-lg leading-relaxed text-muted">
+                Settings → Apps → Search "AppCloud" or "App Cloud"
+              </p>
+            </div>
+            <div className="border-l-2 border-accent pl-4 sm:pl-6">
+              <h3 className="text-lg font-medium mb-2">Try to disable it</h3>
+              <p className="text-base sm:text-lg leading-relaxed text-muted">
+                Settings → Apps → AppCloud → Disable (may not work on all
+                devices)
+              </p>
+            </div>
+            <div className="border-l-2 border-accent pl-4 sm:pl-6">
+              <h3 className="text-lg font-medium mb-2">Revoke permissions</h3>
+              <p className="text-base sm:text-lg leading-relaxed text-muted">
+                Settings → Apps → AppCloud → Permissions → Turn off all
+                permissions
+              </p>
+            </div>
+            <div className="border-l-2 border-accent pl-4 sm:pl-6">
+              <h3 className="text-lg font-medium mb-2">
+                Use ADB to remove (Advanced)
+              </h3>
+              <p className="text-base sm:text-lg leading-relaxed text-muted">
+                Connect to PC → Enable Developer Options → Use ADB commands to
+                uninstall
+              </p>
+            </div>
+            <div className="border-l-2 border-accent pl-4 sm:pl-6">
+              <h3 className="text-lg font-medium mb-2">Document and report</h3>
+              <p className="text-base sm:text-lg leading-relaxed text-muted">
+                Take screenshots of AppCloud on your device and report to
+                privacy authorities
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Resources */}
         <section className="mb-12 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl font-semibold mb-6 sm:mb-8">

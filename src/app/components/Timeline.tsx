@@ -58,21 +58,6 @@ export function Timeline() {
                     day: "numeric",
                   })}
                 </time>
-                <div
-                  className={`px-2 py-1 rounded-full text-xs font-medium ${
-                    entry.status === "completed"
-                      ? "bg-accent/20 text-accent"
-                      : entry.status === "in-progress"
-                      ? "bg-yellow-500/20 text-yellow-400"
-                      : "bg-muted/20 text-muted"
-                  }`}
-                >
-                  {entry.status === "completed"
-                    ? "Completed"
-                    : entry.status === "in-progress"
-                    ? "In Progress"
-                    : "Planned"}
-                </div>
               </div>
 
               {entry.link ? (

@@ -1,11 +1,34 @@
 import { Timeline } from "./components/Timeline";
 import { WorldMap } from "../components/WorldMap";
 import { ContributeModal } from "../components/ContributeModal";
+import { StatsBox } from "../components/StatsBox";
+import affectedCountries from "../data/affected-countries.json";
+
+interface AffectedCountry {
+  countryCode: string;
+  countryName: string;
+  status: string;
+  discoveredBy: string;
+  date: string;
+  details: string;
+  reportCount: number;
+  affectedModels: string[];
+}
 
 export default function Home() {
+  // Get all unique affected models from all countries
+  const allAffectedModels = Array.from(
+    new Set(
+      (affectedCountries as AffectedCountry[]).flatMap(
+        (country) => country.affectedModels
+      )
+    )
+  ).sort();
+
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+      <StatsBox />
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12 pt-24 sm:pt-28">
         {/* Header */}
         <header className="mb-12 sm:mb-16">
           <h1 className="text-4xl sm:text-5xl font-bold mb-4 tracking-tight">
@@ -43,6 +66,25 @@ export default function Home() {
               <p className="text-base sm:text-lg leading-relaxed">
                 Pre-installed on Samsung A & M series globally, including WANA
                 and Southeast Asia.
+              </p>
+            </div>
+            <div className="border-l-2 border-accent pl-4 sm:pl-6">
+              <p className="text-base sm:text-lg leading-relaxed">
+                Confirmed affected models:{" "}
+                {allAffectedModels.length > 0 ? (
+                  <span className="inline-flex flex-wrap gap-2 mt-1">
+                    {allAffectedModels.map((model, index) => (
+                      <span
+                        key={index}
+                        className="bg-accent/20 text-accent px-2 py-1 rounded text-sm font-medium"
+                      >
+                        {model}
+                      </span>
+                    ))}
+                  </span>
+                ) : (
+                  <span className="text-muted">None reported yet</span>
+                )}
               </p>
             </div>
           </div>
@@ -94,7 +136,7 @@ export default function Home() {
                 href="/terms"
                 className="text-accent hover:text-accent-muted text-base sm:text-lg font-medium"
               >
-                Terms & Conditions →
+                Terms of Use →
               </a>
             </div>
             <div className="border-l-2 border-accent pl-4 sm:pl-6">
@@ -110,9 +152,11 @@ export default function Home() {
 
         {/* Global Impact */}
         <section className="mb-12 sm:mb-16">
-          <h2 className="text-2xl sm:text-3xl font-semibold mb-6 sm:mb-8">
-            Global Impact
-          </h2>
+          <a href="/global-impact" className="group block">
+            <h2 className="text-2xl sm:text-3xl font-semibold mb-6 sm:mb-8 group-hover:text-accent transition-colors cursor-pointer">
+              Global Impact →
+            </h2>
+          </a>
           <p className="text-base sm:text-lg leading-relaxed mb-6 text-muted">
             Countries where AppCloud presence has been confirmed on Samsung
             devices.

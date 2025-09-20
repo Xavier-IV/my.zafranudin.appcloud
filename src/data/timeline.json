@@ -14,5 +14,13 @@
     "tags": ["technical", "backdoor"],
     "status": "completed",
     "link": "/research/john-backdoor-discovery"
+  },
+  {
+    "date": "2025-09-20",
+    "title": "Personal verification and investigation",
+    "description": "Discovered the AppCloud posts, verified the app exists on wife's Samsung phone. Made Twitter post to raise awareness and began investigating Terms & Conditions, finding suspicious clauses.",
+    "tags": ["verification", "investigation"],
+    "status": "completed",
+    "link": "/research/personal-investigation"
   }
 ]

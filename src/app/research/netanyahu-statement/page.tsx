@@ -1,3 +1,5 @@
+import { ResearchNavigation } from "../../../components/ResearchNavigation";
+
 export default function NetanyahuStatementPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -163,15 +165,8 @@ export default function NetanyahuStatementPage() {
           </div>
         </section>
 
-        {/* Back Link */}
-        <div className="border-l-2 border-accent pl-4 sm:pl-6">
-          <a
-            href="/"
-            className="text-accent hover:text-accent-muted text-base sm:text-lg font-medium"
-          >
-            ← Back to Research
-          </a>
-        </div>
+        {/* Navigation */}
+        <ResearchNavigation currentLink="/research/netanyahu-statement" />
       </div>
     </div>
   );

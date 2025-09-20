@@ -1,4 +1,6 @@
 import { Timeline } from "./components/Timeline";
+import { WorldMap } from "../components/WorldMap";
+import { ContributeModal } from "../components/ContributeModal";
 
 export default function Home() {
   return (
@@ -51,43 +53,31 @@ export default function Home() {
           <h2 className="text-2xl sm:text-3xl font-semibold mb-6 sm:mb-8">
             What you can do
           </h2>
-          <div className="space-y-5 sm:space-y-6">
+          <div className="space-y-4">
             <div className="border-l-2 border-accent pl-4 sm:pl-6">
               <h3 className="text-lg font-medium mb-2">
                 Check if you have AppCloud
               </h3>
-              <p className="text-base sm:text-lg leading-relaxed text-muted">
-                Settings → Apps → Search "AppCloud" or "App Cloud"
+              <p className="text-base leading-relaxed text-muted">
+                Settings → Apps → Search "AppCloud"
               </p>
             </div>
             <div className="border-l-2 border-accent pl-4 sm:pl-6">
               <h3 className="text-lg font-medium mb-2">Try to disable it</h3>
-              <p className="text-base sm:text-lg leading-relaxed text-muted">
-                Settings → Apps → AppCloud → Disable (may not work on all
-                devices)
+              <p className="text-base leading-relaxed text-muted">
+                Settings → Apps → AppCloud → Disable
               </p>
             </div>
             <div className="border-l-2 border-accent pl-4 sm:pl-6">
               <h3 className="text-lg font-medium mb-2">Revoke permissions</h3>
-              <p className="text-base sm:text-lg leading-relaxed text-muted">
+              <p className="text-base leading-relaxed text-muted">
                 Settings → Apps → AppCloud → Permissions → Turn off all
-                permissions
               </p>
             </div>
             <div className="border-l-2 border-accent pl-4 sm:pl-6">
-              <h3 className="text-lg font-medium mb-2">
-                Use ADB to remove (Advanced)
-              </h3>
-              <p className="text-base sm:text-lg leading-relaxed text-muted">
-                Connect to PC → Enable Developer Options → Use ADB commands to
-                uninstall
-              </p>
-            </div>
-            <div className="border-l-2 border-accent pl-4 sm:pl-6">
-              <h3 className="text-lg font-medium mb-2">Document and report</h3>
-              <p className="text-base sm:text-lg leading-relaxed text-muted">
-                Take screenshots of AppCloud on your device and report to
-                privacy authorities
+              <h3 className="text-lg font-medium mb-2">Document it</h3>
+              <p className="text-base leading-relaxed text-muted">
+                Take screenshots and report to privacy authorities
               </p>
             </div>
           </div>
@@ -118,6 +108,19 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Global Impact */}
+        <section className="mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl font-semibold mb-6 sm:mb-8">
+            Global Impact
+          </h2>
+          <p className="text-base sm:text-lg leading-relaxed mb-6 text-muted">
+            Countries where AppCloud presence has been confirmed on Samsung
+            devices.
+          </p>
+          <WorldMap />
+          <ContributeModal />
+        </section>
+
         {/* Timeline */}
         <section>
           <h2 className="text-2xl sm:text-3xl font-semibold mb-6 sm:mb-8">
@@ -125,6 +128,13 @@ export default function Home() {
           </h2>
           <Timeline />
         </section>
+
+        {/* Copyright */}
+        <footer className="mt-16 pt-8 border-t border-border text-center">
+          <p className="text-sm text-muted">
+            © {new Date().getFullYear()} AppCloud Research. All rights reserved.
+          </p>
+        </footer>
       </div>
     </div>
   );

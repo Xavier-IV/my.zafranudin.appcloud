@@ -1,5 +1,15 @@
 [
   {
+    "countryCode": "LBN",
+    "countryName": "Lebanon",
+    "status": "confirmed",
+    "discoveredBy": "SMEX Digital Rights Organization",
+    "date": "2025-05-05",
+    "details": "SMEX reports numerous user complaints across WANA region. Highlights legal concerns as Israeli companies are barred from operating in Lebanon.",
+    "reportCount": 5,
+    "affectedModels": ["Galaxy A-series", "Galaxy M-series"]
+  },
+  {
     "countryCode": "DEU",
     "countryName": "Germany",
     "status": "confirmed",
